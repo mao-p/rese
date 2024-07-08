@@ -1,0 +1,91 @@
+/* カスタムCSS */
+.filters {
+    border: none !important;
+    padding: 5px !important;
+    border-radius: 5px !important;
+    background-color: #ffffff !important;
+    margin-bottom: 20px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 50% !important;
+    margin-left: auto !important;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.filters .form-group {
+    margin-bottom: 0 !important;
+    flex: 1 !important;
+    border: none !important;
+}
+
+.filters .form-group:not(:last-child) {
+    margin-right: 10px !important;
+}
+
+.filters .form-control {
+    display: inline-block !important;
+    border: none !important;
+    padding: 2px 5px !important;
+    font-size: 12px !important;
+    vertical-align: middle !important;
+}
+
+i.fas.fa-search.text-muted {
+    display: inline-block !important;
+    font-size: 12px !important;
+    margin-right: 5px !important;
+    vertical-align: middle !important;
+}
+
+/* フォーカス時のアウトラインを削除 */
+.filters .form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.card-text {
+    overflow: hidden;
+    /* テキストのオーバーフローを隠す */
+    text-overflow: ellipsis;
+    /* 省略記号を表示 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* 表示する行数を指定 */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap !important;
+    /* テキストを1行に */
+    overflow: hidden;
+    /* オーバーフローを隠す */
+    text-overflow: ellipsis;
+    /* 省略記号を表示 */
+}
+
+/* ジャンルとエリアを横並びにするスタイル */
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .details {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card-body .details .card-text {
+    margin: 0 !important;
+    flex: 1;
+    margin-right: 5px;
+}
+
+/* ジャンルとエリアと詳しく見るボタンの間に余白を追加 */
+.card-body .details {
+    margin-bottom: 10px;
+}

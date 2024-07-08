@@ -1,0 +1,63 @@
+/* カードのスタイル */
+.card {
+    margin: auto;
+    width: 80%;
+    max-width: 450px;
+    /* カードの幅を調整 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    height: auto;
+}
+
+/* カードのヘッダー */
+.card-header {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.custom-input {
+    margin-left: -100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    width: calc(100% + 100px);
+
+}
+
+.custom-input:focus {
+    border-bottom-color: #007bff;
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-input::placeholder {
+    font-style: italic;
+    color: #6c757d;
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545;
+}
+
+.btn-primary {
+    float: right;
+}
+
+.text-md-end {
+    margin-top: 10px;
+    
+}
+
+.fa-envelope {
+    margin-right: 10px;
+    color: #6c757d;
+    /* アイコンの色をグレーに */
+}

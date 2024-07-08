@@ -1,0 +1,10 @@
+.custom-card-header {
+    background-color: #007bff;
+    /* Bootstrapの青色 */
+    color: #ffffff;
+    /* 白色のテキスト */
+    font-size: 1.25rem;
+    /* 文字サイズの調整 */
+    font-weight: 500;
+    /* 文字の太さの調整 */
+}

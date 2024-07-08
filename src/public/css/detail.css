@@ -1,0 +1,97 @@
+/* 全体の余白を調整 */
+
+.card {
+    overflow: hidden;
+    margin: auto;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* カードにシャドウを追加して見た目を改善 */
+}
+
+
+.form-control {
+    font-size: 14px;
+    padding: 2rem;
+}
+
+.form-control-no-border {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 7px 15px;
+}
+
+.form-control-no-border:focus {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+/* 日付入力フィールド用の角丸スタイル */
+input[type="date"].form-control-no-border {
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 40%;
+}
+
+input[type="date"].form-control-no-border:focus {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-primary-custom {
+    background-color: #1366bf !important;
+    color: white;
+    border: none;
+   
+    width: 100%;
+    display: 100%;
+
+}
+
+.card .card-body .rounded-form {
+    border-radius: 5px;
+    /* 角丸を深くする */
+    background-color: #007bff;
+    /* 薄い青色 */
+    color: white;
+}
+
+.card-no-border {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+/* ボタンの背景色を青に設定 */
+.btn-light {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* ボタンのホバーエフェクト */
+.btn-light:hover {
+    background-color: #007bff;
+    /* ホバー時の背景色を濃い青に変更 */
+}
+
+/* 予約フォーム全体の角丸 */
+.rounded-form {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: -10px;
+}
+
+.card-confirmation {
+    border-radius: 5px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}

@@ -1,0 +1,124 @@
+.section-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+
+.card-header-reservation {
+    background-color: blue;
+    color: white;
+}
+
+.card-body-reservation {
+    background-color: blue;
+    color: white;
+}
+
+.btn-link.text-white {
+    color: white !important;
+}
+
+.float-left.text-white {
+    color: white !important;
+}
+
+.float-right.text-white {
+    color: white !important;
+}
+
+.btn-link .fas.fa-times {
+    color: white;
+}
+
+.btn-link .fas.fa-times:hover {
+    color: lightgray;
+}
+
+.reservation-text-white {
+    color: white;
+}
+
+.btn-link .fa-clock {
+    color: white;
+}
+
+.card-header-reservation .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-header-reservation .clock-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ボタンのスタイルを修正 */
+form button {
+    background-color: #87CEEB;
+    /* 薄い青色 */
+    border: none;
+    border-radius: 8px;
+    /* 角丸 */
+    color: white;
+    /* テキストの色 */
+    padding: 10px 20px;
+    /* パディング */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+/* ボタンのホバー効果 */
+form button:hover {
+    background-color: #00BFFF;
+    /* ホバー時の色を少し濃い青に */
+    color: white;
+}
+
+/* カードの画像とテキストを揃えるためのスタイル */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    /* 高さを統一 */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+    /* Bootstrapのデフォルト値 */
+}
