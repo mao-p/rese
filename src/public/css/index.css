@@ -1,4 +1,8 @@
-/* カスタムCSS */
+.custom-container {
+    padding-left: 0 !important;
+    padding-right: 10 !important;
+    margin-right: -50px !important;
+}
 .filters {
     border: none !important;
     padding: 5px !important;
@@ -43,6 +47,10 @@ i.fas.fa-search.text-muted {
     box-shadow: none !important;
 }
 
+.row {
+    margin-right: -90px !important;
+    margin-left: -80px;
+}
 
 .card-text {
     overflow: hidden;
@@ -89,3 +97,12 @@ i.fas.fa-search.text-muted {
 .card-body .details {
     margin-bottom: 10px;
 }
+
+           /* 768pxから1023pxの間で3列 */
+           @media (min-width: 768px) and (max-width: 1023px) {
+               .col-mb-4 {
+                   flex: 0 0 33.3333% !important;
+                   max-width: 33.3333% !important;
+               }
+           }
+    

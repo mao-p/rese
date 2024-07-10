@@ -137,9 +137,7 @@ ul {
   color: #ffffff;
 }
 
-.container {
-  max-width: 100%;
-}
+
 
 
 /* タブレットおよびスマートフォン用のレスポンシブデザイン */
@@ -149,12 +147,6 @@ ul {
     /* フォントサイズを調整 */
   }
 
-  .container {
-    width: 100%;
-    /* 幅を100%に */
-    padding: 0 15px;
-    /* パディングを追加 */
-  }
 
   .modal-content {
     width: 90%;
@@ -172,11 +164,12 @@ ul {
     font-size: 1.2em;
     /* フォントサイズを調整 */
   }
-        .filters {
-          display: flex;
-          flex-direction: column;
+
+  .filters {
+        display: flex;
+        flex-direction: column;
           /* フォーム要素を縦並びに */
-        }
+  }
 
 }
 
@@ -188,8 +181,7 @@ ul {
   }
 
   .container {
-    width: 80%;
-    /* 幅を80%に */
+    width: 100%;
     margin: auto;
     /* 中央揃え */
   }
@@ -205,6 +197,8 @@ ul {
     max-width: 450px;
     /* カードの最大幅を設定 */
   }
+
+  
 
   .card-header {
     font-size: 1.5em;

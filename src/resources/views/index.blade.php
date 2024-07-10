@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="custom-container">
         <div class="row">
             <div class="col-md-12">
 
@@ -95,7 +95,7 @@
                 <!-- 店舗カードの表示 -->
                 <div class="row mt-4">
                     @foreach($restaurants as $restaurant)
-                        <div class="col-md-3">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card mb-4">
                                 <img src="{{ $restaurant->image }}" class="card-img-top" alt="{{ $restaurant->name }}">
                                 <div class="card-body">

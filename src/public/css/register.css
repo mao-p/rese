@@ -1,25 +1,31 @@
-/* カードのスタイル */
-.card {
+
+.register-card {
+    background-color: #ffffff !important;
     margin: auto;
-    width: 80%;
-    max-width: 450px;
+    width: 100%;
+    max-width: 600px;
     /* カードの幅を調整 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0;
+    padding-bottom: 20px;
     height: auto;
+}
+
+.register-card-body {
+    background-color: #ffffff !important;
+    
 }
 
 /* カードのヘッダー */
 .card-header {
     background-color: #007bff;
     color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
+    text-align: left;
+    padding: 10px 10px;
     margin: 0;
 }
 
 .custom-input {
-    margin-left: -100px;
+    margin-left: 0;
     margin-top: 5px;
     margin-bottom: 5px;
     border: none;
@@ -27,7 +33,6 @@
     border-radius: 0;
     box-shadow: none;
     width: 100%;
-    width: calc(100% + 100px);
 
 }
 
@@ -53,7 +58,7 @@
 
 .text-md-end {
     margin-top: 10px;
-    
+    margin-right: -80px;
 }
 
 .fa-envelope {
@@ -61,3 +66,65 @@
     color: #6c757d;
     /* アイコンの色をグレーに */
 }
+
+/* 中央に配置 */
+.input-group {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 3px;
+
+}
+
+.input-icon {
+    margin-right: 0;
+    margin-left: 20px;
+    color: #6c757d;
+}
+
+
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .register-card {
+        width: 90%;
+        max-width: 90%;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+        .custom-input {
+            width: 100%;
+            /* 入力フォームを幅いっぱいに広げる */
+            font-size: 12px;
+            /* フォントサイズを調整 */
+            padding: 8px;
+            /* 入力フォームのパディングを調整 */
+        }
+    .text-md-end {
+        text-align: left;
+        margin-right: 2px;
+    }
+
+    .input-group {
+  
+        align-items: flex-start;
+                    /* 左寄せに変更 */
+    }
+
+    .input-icon {
+
+        margin-right: 5px;
+    }
+
+        .btn-primary {
+   
+            font-size: 14px;
+            /* フォントサイズを調整 */
+            padding: 8px 16px;
+            /* ボタンのパディングを調整 */
+            margin-right: 30px;
+        }
+        }

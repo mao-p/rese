@@ -2,19 +2,26 @@
 
 @section('styles')
    <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
+   <style>
+       /* カスタムスタイルの追加 */
+       .favorites-section .favorite-card-container {
+           padding-left: 5px;
+           padding-right: 5px;
+       }
+   </style>
 @endsection
 
 @section('content')
     <div class="container">
         <!-- ユーザーのログイン状況を右側に配置 -->
-        <div class="row mb-4 justify-content-end">
+        <div class="user-info row mb-4 justify-content-end">
             <div class="col-md-3 text-right">
                 <p class="user-name">ログイン中: {{ Auth::user()->name }}</p>
             </div>
         </div>
 
         <!-- 予約状況とお気に入りのタイトルを左寄せで横並びに配置 -->
-        <div class="row mb-4">
+        <div class="section-titles row mb-4">
             <div class="col-md-6">
                 <h2 class="section-title">予約状況</h2>
             </div>
@@ -23,9 +30,9 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="content-row row">
             <!-- 予約一覧セクション -->
-            <div class="col-md-6 mb-4">
+            <div class="reservation-section col-md-6 mb-4">
                 @if ($reservations->isEmpty())
                     <p>予約はありません。</p>
                 @else
@@ -64,30 +71,36 @@
             </div>
 
             <!-- お気に入りセクション -->
-            <div class="col-md-6 mb-4">
+            <div class="favorites-section col-md-6 mb-4">
                 @if ($favorites->isEmpty())
                     <p>お気に入りの店舗はありません。</p>
                 @else
                     <div class="row">
                         @foreach ($favorites as $favorite)
-                            <div class="col-md-6 mb-4">
-                                <form action="{{ route('favorite.toggle', $favorite->id) }}" method="POST" class="card">
-                                    @csrf
+                            <div class="col-12 col-md-6 mb-4">
+                                <div class="card favorite-card">
                                     <img src="{{ $favorite->image }}" class="card-img-top" alt="{{ $favorite->name }}">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $favorite->name }}</h5>
-                                        <p class="card-text">ジャンル: {{ $favorite->genre }}</p>
-                                        <p class="card-text">エリア: {{ $favorite->area }}</p>
-                                        <a href="{{ route('restaurants.detail', $favorite->id) }}" class="btn btn-primary">詳細を見る</a>
-                                        <button type="submit" class="custom-delete-button btn btn-secondary">
-                                            @if($favorite->favoritedBy->contains(Auth::user()))
-                                                <i class="fas fa-heart" style="color: red;"></i>
-                                            @else
-                                                <i class="far fa-heart"></i>
-                                            @endif
-                                        </button>
+                                    <div class="card-body favorite-card-body">
+                                        <h5 class="card-title favorite-card-title">{{ $favorite->name }}</h5>
+                                        <div class="favorite-card-details">
+                                            <p class="card-text favorite-card-text">#{{ $favorite->genre }}</p>
+                                            <p class="card-text favorite-card-text">#{{ $favorite->area }}</p>
+                                        </div>
+                                        <div class="favorite-card-actions d-flex justify-content-between">
+                                            <a href="{{ route('restaurants.detail', $favorite->id) }}" class="btn btn-primary">詳しく見る</a>
+                                            <form action="{{ route('favorite.toggle', $favorite->id) }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="favorite-button">
+                                                    @if($favorite->favoritedBy->contains(Auth::user()))
+                                                        <i class="fas fa-heart" style="color: red;"></i>
+                                                    @else
+                                                        <i class="far fa-heart"></i>
+                                                    @endif
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -130,7 +143,6 @@
     </div>
 
     <!-- JavaScript -->
-
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
