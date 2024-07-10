@@ -8,27 +8,21 @@
 .login-card {
     margin: auto;
     width: 80%;
-    /* カードの幅を調整 */
     max-width: 450px;
-    /* カードの最大幅を設定 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* カードに影を追加 */
     padding: 0;
-    /* カードの内側の余白を設定 */
     height: auto;
 }
 
 @media (max-width: 768px) {
     .login-card {
         width: 80%;
-        /* 小さい画面ではカードの幅を80%に */
     }
 }
 
 @media (min-width: 769px) {
     .login-card {
         width: 80%;
-        /* 大きい画面ではカードの幅を1/3に */
     }
 }
 
@@ -73,5 +67,9 @@
     padding: 10px 0;
     margin: 0;
     border-bottom: none;
-    /* ヘッダーの下の余白を消す */
+}
+
+.custom-invalid-feedback {
+    color: red;
+    font-size: 12px;
 }

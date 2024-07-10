@@ -49,15 +49,15 @@ class AuthenticatedSessionController extends Controller
      */
     public function logout(Request $request)
     {
-        
+
         Auth::logout();
 
-        $request->session()->invalidate(); // セッションの無効化
-        $request->session()->regenerateToken(); // トークンの再生成
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-        $request->session()->flash('status', 'ログアウトしました。'); // ログアウトメッセージをセッションに保存
+        $request->session()->flash('status', 'ログアウトしました。');
 
-        return redirect()->route('restaurants.index'); // 修正されたリダイレクト先
+        return redirect()->route('restaurants.index');
     }
 
     /**

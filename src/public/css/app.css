@@ -42,7 +42,7 @@ html,
   -webkit-tap-highlight-color: transparent; /* 7 */
 }
 
-.navbar .bg-custom {
+.navbar {
   background-color: #e7e5e5 !important;
 }
 
