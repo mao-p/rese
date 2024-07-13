@@ -28,7 +28,12 @@ Route::post('/reservations/store', [ReservationController::class, 'store'])->nam
 Route::get('/restaurants/{restaurant_id}/reservations/create', [ReservationController::class, 'create'])->name('reservations.create');
 Route::get('/done', [ReservationController::class, 'done'])->name('reservation.done');
 Route::delete('/reservations/{id}', [ReservationController::class, 'destroy'])->name('reservation.delete');
-Route::put('/reservations/{reservation}', [ReservationController::class, 'update'])->name('reservations.update');
+//Route::put('/reservations/{reservation}', [ReservationController::class, 'update'])->name('reservations.update');
+
+
+Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');
+Route::put('/reservations/{id}', [ReservationController::class, 'update'])->name('reservations.update');
+
 
 
 

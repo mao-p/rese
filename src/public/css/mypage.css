@@ -186,6 +186,23 @@ form button {
     font-size: 18px;
 }
 
+.reservation-modal-content {
+    background-color: rgb(159, 159, 150);
+    max-width: 650px;
+    width: 100%;
+}
+
+.reservation-btn-primary {
+    font-size: 12px;
+    background-color: rgb(130, 143, 228);
+}
+
+.update-btn-primary {
+    font-size: 15px;
+    color: beige;
+    
+    background-color: rgb(108, 111, 109);
+}
 
 
 /* 768px以下のスタイル（タブレット・スマートフォン向け） */

@@ -79,4 +79,27 @@ class ReservationController extends Controller
         // 成功時のメッセージを返す
         return redirect()->back()->with('success', '予約が正常に削除されました。');
     }
+
+       public function edit($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        return view('updateReservation', compact('reservation'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'reservation_date' => 'required|date',
+            'reservation_time' => 'required',
+            'party_size' => 'required|integer|min:1',
+        ]);
+
+        $reservation = Reservation::findOrFail($id);
+        $reservation->reservation_date = $request->input('reservation_date');
+        $reservation->reservation_time = $request->input('reservation_time');
+        $reservation->party_size = $request->input('party_size');
+        $reservation->save();
+
+        return redirect()->route('mypage')->with('success', '予約内容が更新されました');
+    }
 }

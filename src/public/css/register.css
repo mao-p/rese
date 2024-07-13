@@ -2,6 +2,7 @@
 .register-card {
     background-color: #ffffff !important;
     margin: auto;
+    margin-top: 50px;
     width: 100%;
     max-width: 600px;
     /* カードの幅を調整 */
@@ -25,7 +26,7 @@
 
 .custom-input {
     margin-left: 0;
-    margin-top: 5px;
+    
     margin-bottom: 5px;
     border: none;
     border-bottom: 1px solid #ced4da;
@@ -57,7 +58,7 @@
 
 .text-md-end {
     margin-top: 10px;
-    margin-right: -80px;
+    margin-right: -70px !important;
 }
 
 .fa-envelope {
@@ -88,30 +89,54 @@
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .register-card {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 10px;
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin-left: 10px !important;
         margin-right: 10px;
     }
 
     .custom-input {
-        width: 100%;
+        width: 70% !important;
         font-size: 10px;
-        padding: 8px;
-        }
+        
+    }
+
+    .form {
+        flex: 65 2 25%;
+        padding-right: 20px !important;
+    }
+
     .text-md-end {
-        text-align: left;
-        margin-right: 2px;
+        text-align: left !important;
+        margin-right: -40px !important;
+        margin-left: -20px !important;
+
+
+    }
+
+    .input-group label {
+                    width: auto;
+                    margin-right: 10px;
+    }
+        
+    .input-group .custom-input {
+        margin-left:  22px !important;
+        margin-top: 5px !important;
     }
 
     .input-group {
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .input-icon {
 
         margin-right: 5px;
+        margin-left: 40px;
+        margin-top: 10px;
     }
+
 
     .btn-primary {
         font-size: 14px;

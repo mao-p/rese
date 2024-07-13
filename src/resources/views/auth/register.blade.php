@@ -17,11 +17,11 @@
 
                         <!-- Name Field -->
                         <div class="row mb-3 input-group">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">
+                            <label for="name" class="col-md-4 text-md-end">
                                 <i class="fas fa-user input-icon"></i>
                             </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 form">
                                 <input id="name" type="text" class="form-control custom-input @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Username">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
                                 <i class="fas fa-envelope input-icon"></i>
                             </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 form">
                                 <input id="email" type="email" class="form-control custom-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -53,7 +53,7 @@
                                 <i class="fas fa-key input-icon"></i>
                             </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 form">
                                 <input id="password" type="password" class="form-control custom-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
